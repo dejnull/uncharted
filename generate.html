@@ -11,8 +11,11 @@
 <p id="demo"></p>
 <script>
 function generate() {
-    var x = Math.floor((Math.random() * 10) + 1);
-    document.getElementById("demo").innerHTML = x;
+
+
+    var list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+    var randomElement = list[Math.floor(Math.random() * list.length)];
+    document.getElementById("demo").innerHTML = randomElement;
 }
 </script>
 </body>
