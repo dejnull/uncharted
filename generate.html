@@ -70,14 +70,19 @@ function generate() {
 // get current date and time
 var date = new Date();
 var day = date.getDate();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+var hours = date.getHours();
+
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
 
 document.getElementById("daydate").innerHTML = day;
 
 // target date is 22 Jan
-var remaining = 22 - day;
-var timeleft = remaining * 24 * 60 * 60;
+var remaining_days = 22 - day;
+// to double check if the date is correct
+var timeleft = (remaining * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60) - seconds;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
