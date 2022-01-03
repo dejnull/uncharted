@@ -18,9 +18,9 @@
 <br>
 
 <!-- show the current date and time -->
-<p id="demo2"></p>
+<p id="daydate"></p>
 <br>
-<p id="demo3"></p>
+<p id="countdown"></p>
 
 
 <script>
@@ -32,10 +32,18 @@ function generate() {
 
 // get current date and time
 var d = new Date();
-document.getElementById("demo2").innerHTML = d;
-// covert d in seconds
-var seconds = d.getSeconds();
-document.getElementById("demo3").innerHTML = seconds;
+document.getElementById("daydate").innerHTML = d;
+
+var timeleft = 10;
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Finished";
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+  }
+  timeleft -= 1;
+}, 1000);
 
 </script>
 </body>
