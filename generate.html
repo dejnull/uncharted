@@ -82,7 +82,7 @@ document.getElementById("daydate").innerHTML = day;
 var timer;
 
 var compareDate = new Date();
-compareDate.setDate(compareDate.getDate() + 1); //just for this demo today + 7 days
+compareDate.setDate(compareDate.getDate() + 7); //just for this demo today + 7 days
 
 timer = setInterval(function() {
   timeBetweenDates(compareDate);
@@ -115,7 +115,6 @@ function timeBetweenDates(toDate) {
     $("#seconds").text(seconds);
   }
 }
-
 </script>
 </body>
 </html>
