@@ -49,16 +49,18 @@
 
 <script>
 function generate() {
-    var list = ["Success is not final, failure is not fatal, It is the courage to continue that counts", 
-    "Don’t let yesterday take up too much of today", 
-    "Experience is a hard teacher because she gives the test first, the lesson afterwards", 
-    "Someone's sitting in the shade today because someone planted a tree a long time ago", 
-    "Life is like riding a bicycle. To keep your balance, you must keep moving", 
-    "The best way to predict your future is to create it",
-    "The best way to find yourself is to lose yourself in the service of others",
-    "A clever person solves a problem. A wise person avoids it",
-    "Reality is merely an illusion, albeit a very persistent one",
-    "We suffer more often in imagination than in reality"];
+    var list = ["Success is not final, failure is not fatal, It is the courage to continue that counts...", 
+    "Don’t let yesterday take up too much of today...", 
+    "Experience is a hard teacher because she gives the test first, the lesson afterwards...", 
+    "Someone's sitting in the shade today because someone planted a tree a long time ago...", 
+    "Life is like riding a bicycle. To keep your balance, you must keep moving...", 
+    "The best way to predict your future is to create it...",
+    "The best way to find yourself is to lose yourself in the service of others...",
+    "A clever person solves a problem. A wise person avoids it...",
+    "Reality is merely an illusion, albeit a very persistent one...",
+    "We suffer more often in imagination than in reality...",
+    "He suffers more than necessary, who suffers before it is necessary...",
+    "Enjoy present pleasures in such a way as not to injure future ones..."];
     var randomElement = list[Math.floor(Math.random() * list.length)];
     document.getElementById("demo").innerHTML = randomElement;
 }
@@ -116,10 +118,10 @@ function timeBetweenDates(toDate) {
     // $("#hours").text(hours);
     // $("#minutes").text(minutes);
     // $("#seconds").text(seconds);
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("#days").innerHTML = days;
+    document.getElementById("#hours").innerHTML = hours;
+    document.getElementById("#minutes").innerHTML = minutes;
+    document.getElementById("#seconds").innerHTML = seconds;
   }
 }
 </script>
