@@ -1,0 +1,19 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Generate</title>
+</head>
+<body>
+<h1>Generate</h1>
+
+<button onclick="generate()">Generate</button>
+<p id="demo"></p>
+<script>
+function generate() {
+    var x = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>

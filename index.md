@@ -1,3 +1,5 @@
-Lorem ipsum dolor sit amet.
+Do click it to see the content.
 
-[Click me](http://www.google.com){: .btn}
+
+
+[Click me](./generate.html){: .btn}
