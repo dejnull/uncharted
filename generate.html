@@ -29,7 +29,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>Generate</h1>
+<h1>Get your quote ;)</h1>
 
 <!-- Display random strings from list -->
 <button onclick="generate()">Get your daily quote</button>
@@ -60,7 +60,8 @@ function generate() {
     "Reality is merely an illusion, albeit a very persistent one...",
     "We suffer more often in imagination than in reality...",
     "He suffers more than necessary, who suffers before it is necessary...",
-    "Enjoy present pleasures in such a way as not to injure future ones..."];
+    "Enjoy present pleasures in such a way as not to injure future ones...",
+    "To improve is to change, so to be perfect is to change often..."];
     var randomElement = list[Math.floor(Math.random() * list.length)];
     document.getElementById("demo").innerHTML = randomElement;
 }
