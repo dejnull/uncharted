@@ -18,7 +18,12 @@
 <br>
 
 <!-- show the current date and time -->
-<p id="daydate"></p>
+<div id="timer">
+    <span id="days"></span>days
+    <span id="hours"></span>hours
+    <span id="minutes"></span>minutes
+    <span id="seconds"></span>seconds
+</div>
 <br>
 <p id="countdown"></p>
 
@@ -32,18 +37,59 @@ function generate() {
 
 // get current date and time
 var d = new Date();
-document.getElementById("daydate").innerHTML = d;
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
 
-var timeleft = 10;
-var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){
-    clearInterval(downloadTimer);
-    document.getElementById("countdown").innerHTML = "Finished";
-  } else {
-    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-  }
-  timeleft -= 1;
+document.getElementById("daydate").innerHTML = day;
+
+// var timeleft = 10;
+// var downloadTimer = setInterval(function(){
+//   if(timeleft <= 0){
+//     clearInterval(downloadTimer);
+//     document.getElementById("countdown").innerHTML = "Finished";
+//   } else {
+//     document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+//   }
+//   timeleft -= 1;
+// }, 1000);
+
+var timer;
+
+var compareDate = new Date();
+compareDate.setDate(compareDate.getDate() + 1); //just for this demo today + 7 days
+
+timer = setInterval(function() {
+  timeBetweenDates(compareDate);
 }, 1000);
+
+function timeBetweenDates(toDate) {
+  var dateEntered = toDate;
+  var now = new Date();
+  var difference = dateEntered.getTime() - now.getTime();
+
+  if (difference <= 0) {
+
+    // Timer done
+    clearInterval(timer);
+  
+  } else {
+    
+    var seconds = Math.floor(difference / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
+  }
+}
 
 </script>
 </body>
