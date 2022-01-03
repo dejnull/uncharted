@@ -44,7 +44,8 @@
     <span id="seconds"></span>seconds
 </div>
 <br>
-<p id="countdown"></p>
+<hr>
+<p id="daydate"></p>
 
 
 <script>
@@ -73,6 +74,7 @@ var month = date.getMonth() + 1;
 var year = date.getFullYear();
 
 document.getElementById("daydate").innerHTML = day;
+
 
 // var timeleft = 10;
 // var downloadTimer = setInterval(function(){
@@ -115,14 +117,11 @@ function timeBetweenDates(toDate) {
     minutes %= 60;
     seconds %= 60;
 
-    // $("#days").text(days);
-    // $("#hours").text(hours);
-    // $("#minutes").text(minutes);
-    // $("#seconds").text(seconds);
-    document.getElementById("#days").innerHTML = days;
-    document.getElementById("#hours").innerHTML = hours;
-    document.getElementById("#minutes").innerHTML = minutes;
-    document.getElementById("#seconds").innerHTML = seconds;
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
+  
   }
 }
 </script>
