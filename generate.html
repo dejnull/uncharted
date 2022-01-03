@@ -55,7 +55,10 @@ function generate() {
     "Someone's sitting in the shade today because someone planted a tree a long time ago", 
     "Life is like riding a bicycle. To keep your balance, you must keep moving", 
     "The best way to predict your future is to create it",
-    "The best way to find yourself is to lose yourself in the service of others"];
+    "The best way to find yourself is to lose yourself in the service of others",
+    "A clever person solves a problem. A wise person avoids it",
+    "Reality is merely an illusion, albeit a very persistent one",
+    "We suffer more often in imagination than in reality"];
     var randomElement = list[Math.floor(Math.random() * list.length)];
     document.getElementById("demo").innerHTML = randomElement;
 }
@@ -109,10 +112,14 @@ function timeBetweenDates(toDate) {
     minutes %= 60;
     seconds %= 60;
 
-    $("#days").text(days);
-    $("#hours").text(hours);
-    $("#minutes").text(minutes);
-    $("#seconds").text(seconds);
+    // $("#days").text(days);
+    // $("#hours").text(hours);
+    // $("#minutes").text(minutes);
+    // $("#seconds").text(seconds);
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
   }
 }
 </script>
