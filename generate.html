@@ -29,11 +29,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>Test IT</h1>
+<h1>Awaiting 30, when you're old enough to know better, but still young enough not to care</h1>
 
 <!-- Display random strings from list -->
 <button type="button" class="btn btn-primary btn-lg btn-block" onclick="generate()">Get your daily quote</button>
-<p id="demo"></p>
+<br>
+<hr>
+<p <em>id="demo"</em> </p>
 <br>
 <hr>
 <div id="timer">
@@ -58,7 +60,11 @@ function generate() {
     "We suffer more often in imagination than in reality...",
     "He suffers more than necessary, who suffers before it is necessary...",
     "Enjoy present pleasures in such a way as not to injure future ones...",
-    "To improve is to change, so to be perfect is to change often..."];
+    "To improve is to change, so to be perfect is to change often...",
+    "Everything I know I learned after I was thirty...",
+"Everyone is the sum total of past experiences. A character doesn't just spring to life at age thirty...",
+];
+
     var randomElement = list[Math.floor(Math.random() * list.length)];
     document.getElementById("demo").innerHTML = randomElement;
 }
@@ -79,10 +85,10 @@ var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
     
 // Result is output to the specific element
-document.getElementById("days").innerHTML = days + "Days"
-document.getElementById("hours").innerHTML = hours + "Hours" 
-document.getElementById("mins").innerHTML = minutes + "Minutes" 
-document.getElementById("secs").innerHTML = seconds + "Seconds" 
+document.getElementById("days").innerHTML = days + ":Days"
+document.getElementById("hours").innerHTML = hours + ":Hours" 
+document.getElementById("mins").innerHTML = minutes + ":Minutes" 
+document.getElementById("secs").innerHTML = seconds + ":Seconds" 
     
 // Display the message when countdown is over
 if (timeleft < 0) {
@@ -91,7 +97,7 @@ if (timeleft < 0) {
     document.getElementById("hours").innerHTML = "" 
     document.getElementById("mins").innerHTML = ""
     document.getElementById("secs").innerHTML = ""
-    document.getElementById("end").innerHTML = "TIME UP!!";
+    document.getElementById("end").innerHTML = "HAPPY BIRTHDAY!!";
 }
 }, 1000);
 </script>
