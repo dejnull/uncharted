@@ -82,7 +82,7 @@ document.getElementById("daydate").innerHTML = hours;
 // target date is 22 Jan
 var remaining_days = 22 - day;
 // to double check if the date is correct
-var timeleft = (remaining * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60) - seconds;
+var timeleft = 7
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
