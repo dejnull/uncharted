@@ -36,11 +36,17 @@
 <p id="demo"></p>
 <br>
 
-<p id="days"></p>
-<p id="hours"></p>
-<p id="mins"></p>
-<p id="secs"></p>
-<h2 id="end"></h2>
+<!-- show the current date and time -->
+<div id="timer">
+    <span id="days"></span>days
+    <span id="hours"></span>hours
+    <span id="minutes"></span>minutes
+    <span id="seconds"></span>seconds
+</div>
+<br>
+<hr>
+<p id="daydate"></p>
+<p id="countdown"></p>
 
 <script>
 function generate() {
@@ -61,37 +67,37 @@ function generate() {
     document.getElementById("demo").innerHTML = randomElement;
 }
 
-// The data/time we want to countdown to
-var countDownDate = new Date("Jan 22, 2022 23:00:00").getTime();
+// get current date and time
+var date = new Date();
+var day = date.getDate();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+var hours = date.getHours();
 
-// Run myfunc every second
-var myfunc = setInterval(function() {
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
 
-var now = new Date().getTime();
-var timeleft = countDownDate - now;
-    
-// Calculating the days, hours, minutes and seconds left
-var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-    
-// Result is output to the specific element
-document.getElementById("days").innerHTML = days + "d "
-document.getElementById("hours").innerHTML = hours + "h " 
-document.getElementById("mins").innerHTML = minutes + "m " 
-document.getElementById("secs").innerHTML = seconds + "s " 
-    
-// Display the message when countdown is over
-if (timeleft < 0) {
-    clearInterval(myfunc);
-    document.getElementById("days").innerHTML = ""
-    document.getElementById("hours").innerHTML = "" 
-    document.getElementById("mins").innerHTML = ""
-    document.getElementById("secs").innerHTML = ""
-    document.getElementById("end").innerHTML = "TIME UP!!";
-}
+document.getElementById("daydate").innerHTML = hours;
+
+// target date is 22 Jan
+var remaining_days = 22 - day;
+// to double check if the date is correct
+var timeleft = 7
+var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "Finished";
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+  }
+  timeleft -= 1;
 }, 1000);
+
+document.getElementById("days").innerHTML = remaining_days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
 </script>
 </body>
 </html>
