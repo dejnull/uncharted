@@ -38,7 +38,7 @@
 </div>
 <br>
 <hr>
-<p class="text-center" id="demo"></p>
+<p class="text-center" class="fst-italic" id="demo"></p>
 <br>
 <hr>
 <div id="timer">
@@ -65,7 +65,8 @@ function generate() {
     "Enjoy present pleasures in such a way as not to injure future ones...",
     "To improve is to change, so to be perfect is to change often...",
     "Everything I know I learned after I was thirty...",
-    "Everyone is the sum total of past experiences. A character doesn't just spring to life at age thirty...",];
+    "Everyone is the sum total of past experiences. A character doesn't just spring to life at age thirty...",
+];
 
     var randomElement = list[Math.floor(Math.random() * list.length)];
     document.getElementById("demo").innerHTML = randomElement;
