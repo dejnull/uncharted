@@ -35,12 +35,13 @@
 <button onclick="generate()">Get your daily quote</button>
 <p id="demo"></p>
 <br>
-
-<p id="days"></p>
-<p id="hours"></p>
-<p id="mins"></p>
-<p id="secs"></p>
-<h2 id="end"></h2>
+<div id="timer">
+  <span id="days"></span>
+  <span id="hours"></span>
+  <span id="minutes"></span>
+  <span id="seconds"></span>
+  <h2 id="end"></h2>
+ </div> 
 
 <script>
 function generate() {
@@ -62,7 +63,7 @@ function generate() {
 }
 
 // The data/time we want to countdown to
-var countDownDate = new Date("Jan 22, 2022 23:00:00").getTime();
+var countDownDate = new Date("Jan 22, 2022 23:59:59").getTime();
 
 // Run myfunc every second
 var myfunc = setInterval(function() {
@@ -77,10 +78,10 @@ var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
 var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
     
 // Result is output to the specific element
-document.getElementById("days").innerHTML = days + "d "
-document.getElementById("hours").innerHTML = hours + "h " 
-document.getElementById("mins").innerHTML = minutes + "m " 
-document.getElementById("secs").innerHTML = seconds + "s " 
+document.getElementById("days").innerHTML = days + "Days"
+document.getElementById("hours").innerHTML = hours + "Hours" 
+document.getElementById("mins").innerHTML = minutes + "Minutes" 
+document.getElementById("secs").innerHTML = seconds + "Seconds" 
     
 // Display the message when countdown is over
 if (timeleft < 0) {
