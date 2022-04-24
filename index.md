@@ -1,5 +1,4 @@
 Do click it to see the content.
 
 
-
-[Click me](./dadabday.html){: .btn}
+[Click me](./tech_explorer.html){: .btn}
