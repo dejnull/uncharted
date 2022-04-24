@@ -35,15 +35,15 @@
 <hr>
 
 <!--create and read form-->
+<div class="d-flex justify-content-center">
 <form>
-    <label class="text-center" for="fname">Tech name:</label><br>
+    <label for="fname">Tech name:</label><br>
     <input type="text" id="techname" name="techname"><br>
 </form>
-
+</div>
 <script>
-    var techName = document.getElementById("techname").value;
-    console.log(techName);
-    document.getElementById("demo").innerHTML = techName;
+    var tech = document.getElementById("techname").value;
+    document.getElementById("demo").innerHTML = tech; 
 </script>
 
 </body>
