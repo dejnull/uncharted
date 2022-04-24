@@ -43,8 +43,10 @@
 </form>
 </div>
 <script>
-    var tech = document.getElementById("techname").value;
-    document.getElementById("demo").textContent = tech; 
+    function changeText(){
+        var element = document.getElementById("demo");
+        var tech = document.getElementById("techname").value;
+        element.innerHTML = "tech"+tech;; 
 </script>
 
 </body>
