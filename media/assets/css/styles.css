@@ -1,3 +1,15 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* first footes
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+} */
+
 .footer-dark {
   padding:50px 0;
   color:#f0f9ff;
@@ -87,3 +99,5 @@
   font-size:13px;
   margin-bottom:0;
 }
+
+/* https://epicbootstrap.com/snippets/footer-dark */
