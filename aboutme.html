@@ -49,6 +49,15 @@
   </div>
 </nav>
 
+<div class="jumbotron">
+  <h1 class="display-4">About Me!</h1>
+  <p class="lead">Jack of all trades, master of None</p>
+  <hr class="my-4">
+  <p>Check my experience bellow</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Get CV</a>
+  </p>
+</div>
 
 <hr>
 <div class="container">
@@ -93,6 +102,24 @@
 </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+ # create button named download
+<button id="download">Download</button>
+
+# create function for download file test.txt
+function download() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'test.txt', true);
+  xhr.responseType = 'blob';
+  xhr.onload = function(event) {
+    var blob = xhr.response;
+    var link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = 'test.txt';
+    link.click();
+  };
+  xhr.send();
+}
 
 </body>
 </html>
