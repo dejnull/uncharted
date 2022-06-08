@@ -10,7 +10,7 @@ footer {
   padding: 25px;
 } */
 
-/* .footer-dark {
+.footer-dark {
   padding:50px 0;
   color:#f0f9ff;
   background-color:#282d32;
@@ -98,24 +98,6 @@ footer {
   opacity:0.3;
   font-size:13px;
   margin-bottom:0;
-} */
+}
 
 /* https://epicbootstrap.com/snippets/footer-dark */
-
-/* Sticky Footer Classes */
-
-html,
-body {
-  height: 100%;
-}
-
-#page-content {
-  flex: 1 0 auto;
-}
-
-/* Other Classes for Page Styling */
-
-body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
-}
